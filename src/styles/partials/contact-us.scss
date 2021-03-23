@@ -1,0 +1,74 @@
+/*------------------------------*\
+    Contact Us
+\*------------------------------*/
+$module: '.contact-us';
+
+#{$module} {
+    background-color: #F1D1B5;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin: 20px 32px;
+
+    @include bp(medium) {
+        margin: 30px 120px;
+        padding: 30px 60px;
+    }
+
+    @include bp(large) {
+        margin: 30px 180px;
+    }
+
+    @include bp(xlarge) {
+        margin: 30px 320px;
+        padding: 60px 120px;
+    }
+
+    &__form {
+        &-label, &-input, &-submit {
+            display: block;
+        }
+
+        &-textarea {
+            width: 100%;
+            border-radius: 5px;
+            border: solid 2px #F0B7A4;
+            margin-bottom: 10px;
+        }
+
+        &-label {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        &-input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: solid 2px #F0B7A4;
+        }
+
+        &-input, &-textarea {
+            &:active {
+                border: solid 2px #305F72;
+            }
+        }
+
+        &-label[for=newsletter], &-input[type=checkbox] {
+            display: inline;
+        }
+
+        &-submit {
+            text-align: center;
+            padding: 10px 50px;
+            margin: 20px auto;
+            background-color: #305F72;
+            color: white;
+            border: none;
+
+            &:hover {
+                zoom: 1.2;
+            }
+        }
+    }
+}
