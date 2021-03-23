@@ -1,0 +1,20 @@
+{
+  "name": "training1.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "php-start": "php -S localhost:8080",
+    "watch-css": "sass src/styles/main.scss dist/styles/main.bundle.css --watch",
+    "build": "sass src/styles/main.scss dist/styles/main.bundle.css",
+    "start": "concurrently 'npm:php-start' 'npm:watch-css'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "sass": "^1.26.11"
+  },
+  "dependencies": {}
+}

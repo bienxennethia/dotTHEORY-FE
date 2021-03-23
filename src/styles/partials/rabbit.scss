@@ -1,0 +1,56 @@
+/*------------------------------*\
+    Rabbit
+\*------------------------------*/
+$module: '.rabbit';
+
+#{$module} {
+    margin: 20px 32px;
+
+    @include bp(medium) {
+        margin: 30px 120px;
+    }
+
+    @include bp(large) {
+        margin: 30px 180px;
+    }
+
+    @include bp(xlarge) {
+        margin: 30px 320px;
+    }
+
+    &__image {
+        text-align: center;
+
+        img {
+            padding: 20px;
+            border-radius: 15px;
+            border: solid 5px #F0B7A4;
+            width: calc(100% - 45px);
+
+            @include bp(medium) {
+                width: 250px;
+            }
+        }
+    }
+
+    &__content {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: white;
+        text-align: center;
+
+        p {
+            margin: 5px 0;
+            text-align: justify;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        margin-bottom: 10px;
+
+        @include bp(large) {
+            font-size: 40px;
+        }
+    }
+}

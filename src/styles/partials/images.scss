@@ -1,0 +1,23 @@
+/*------------------------------*\
+    Homepage Images
+\*------------------------------*/
+$module: '.images';
+
+#{$module} {
+    &__list {
+        padding: 5px 10px;
+
+        &-item {
+            display: inline;
+            min-width: calc(100% - 10px);
+
+            img {
+                width: 49%;
+
+                @include bp(medium) {
+                    width: 32.9%;
+                }
+            }
+        }
+    }
+}

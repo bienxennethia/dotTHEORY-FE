@@ -1,0 +1,65 @@
+/*-----------------------------*\
+    FONTS
+/*-----------------------------*/
+$font-family: 'Varela Round', sans-serif;
+
+$prompt-weights: (
+    light: 100,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900
+);
+
+/*------------------------------------------------------------------*\
+    FONT WEIGHTS
+    example usages:
+    font-weight: prompt-weights(bold);
+\*------------------------------------------------------------------*/
+@function prompt-weights($weight, $default: 'regular') {
+    @if map-has-key($prompt-weights, $weight) {
+        @return #{map-get($prompt-weights, $weight)};
+    } @else {
+        @warn 'Unknown `#{$weight}` in $prompt-weights.';
+        @return null;
+    }
+}
+
+@mixin font-title($font-weight: 'regular') {
+    font-family: $font-family;
+    font-weight: prompt-weights($font-weight);
+}
+
+
+// Style 1 - Titles, Large secction titles
+@mixin text-style-1 {
+    @include font-title(bold);
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.txt-1 { @include text-style-1; }
+
+// Style 2 - navigation
+@mixin text-style-2 {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+}
+
+.header__nav_item { @include text-style-2; }
+
+// Style 3 - list-title
+@mixin text-style-3 {
+    @include font-title(semibold);
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    color: #568EA6;
+}
+
+.list-title { @include text-style-3; }

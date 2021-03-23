@@ -1,0 +1,136 @@
+/*------------------------------*\
+    Home
+\*------------------------------*/
+$module: '.table';
+
+#{$module} {
+    margin: 20px 32px;
+
+    @include bp(medium) {
+        margin: 30px 120px;
+    }
+
+    @include bp(large) {
+        margin: 30px 180px;
+    }
+
+    @include bp(xlarge) {
+        margin: 30px 320px;
+    }
+
+    &__content {
+        text-align: center;
+        background-color: white;
+        padding: 10px;
+        font-size: 25px;
+
+        &-title {
+            font-size: 30px;
+            margin-bottom: 10px;
+
+            @include bp(large) {
+                font-size: 40px;
+            }
+        }
+
+        p {
+            padding-top: 20px;
+            text-align: justify;
+            font-size: 16px;
+
+            @include bp(medium) {
+                margin: 0 40px;
+            }
+        }
+    }
+
+    &__list {
+        margin-top: 30px;
+
+        &-item {
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: 20px;
+            border: solid 2px #F18C8E;
+
+            &-link {
+                &:hover {
+                    zoom: 1.2;
+                }
+            }
+
+            img {
+                width: 250px;
+                margin: 20px;
+                border: solid 2px #305F72;
+
+                .food & {
+                    width: calc(100% - 20);
+                }
+            }
+
+            &-description {
+                margin-top: 20px;
+                padding: 0 20px 20px;
+                text-align: justify;
+
+                a {
+                    color: #6B3074;
+                    font-weight: 800;
+                    border-bottom: solid 1px #6B3074;
+                }
+            }
+
+            &-content {
+                vertical-align: middle;
+            }
+
+            @include bp(medium) {
+                &-title {
+                    margin-top: 40px;
+
+                    .food & {
+                        margin-top: 0;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    clear: both;
+                    display: table;
+                }
+    
+                img {
+                    .food & {
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__container {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+
+        p {
+            text-align: justify;
+            margin: 5px 0;
+        }
+    }
+
+    &__ul-lists {
+        list-style-type: circle;
+        margin-left: 40px;
+
+        &-item {
+            margin: 10px 0;
+
+            strong {
+                color:  #F18C8E;
+            }
+        }
+    }
+}

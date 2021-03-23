@@ -1,0 +1,28 @@
+/*------------------------------*\
+    Header
+\*------------------------------*/
+$module: '.header';
+
+#{$module} {
+    text-align: center;
+    background-color: #305F72;
+    padding: 40px 0;
+
+    &__title {
+        color: #F18C8E;
+    }
+
+    &__nav_li {
+        display: inline;
+        padding: 0 10px;
+        border-right: solid 3px #777;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__nav_item {
+        color: #F1D1B5;
+    }
+}

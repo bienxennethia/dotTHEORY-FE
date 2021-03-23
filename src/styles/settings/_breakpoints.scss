@@ -1,0 +1,37 @@
+/*-----------------------------*\
+	Breakpoints
+/*-----------------------------*/
+
+$breakpoints-s: 375;
+$breakpoints-m: 768;
+$breakpoints-l: 1024;
+$breakpoints-xl: 1400;
+
+$breakpointsList: (
+    small: ($breakpoints-s * 1px),
+    medium: ($breakpoints-m * 1px),
+    large: ($breakpoints-l * 1px),
+    xlarge: ($breakpoints-xl * 1px)
+);
+
+$breakpoints: ( 0px, $breakpoints-m, $breakpoints-l, $breakpoints-xl );
+
+$there-is-no-higher-breakpoint: 9999em;
+
+$allowed-breakpoint-targets: inspect(map-keys($breakpointsList));
+
+@function get-breakpoint($target) {
+    $breakpoint: map-get($breakpointsList, $target);
+
+    @if $breakpoint == null {
+        @warn('You tried to respond_to "#{$target}". Please use one of these available breakpoints - #{$allowed-breakpoint-targets}');
+    }
+
+    @return $breakpoint;
+}
+
+@mixin bp($target) {
+    @media screen and (min-width: get-breakpoint($target)) {
+        @content;
+    }
+}
