@@ -7,7 +7,7 @@ $module: '.table';
     margin: 20px 32px;
 
     @include bp(medium) {
-        margin: 30px 120px;
+        margin: 20px 120px;
     }
 
     @include bp(large) {
@@ -54,6 +54,28 @@ $module: '.table';
             border-radius: 20px;
             border: solid 2px #F18C8E;
 
+            @include bp(medium) {
+                &-title {
+                    margin-top: 40px;
+
+                    .food & {
+                        margin-top: 0;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    clear: both;
+                    display: table;
+                }
+    
+                img {
+                    .food & {
+                        width: 350px;
+                    }
+                }
+            }
+
             &-link {
                 &:hover {
                     zoom: 1.2;
@@ -62,7 +84,7 @@ $module: '.table';
 
             img {
                 width: 250px;
-                margin: 20px;
+                margin: 20px 20px 10px;
                 border: solid 2px #305F72;
 
                 .food & {
@@ -84,28 +106,6 @@ $module: '.table';
 
             &-content {
                 vertical-align: middle;
-            }
-
-            @include bp(medium) {
-                &-title {
-                    margin-top: 40px;
-
-                    .food & {
-                        margin-top: 0;
-                    }
-                }
-
-                &::after {
-                    content: '';
-                    clear: both;
-                    display: table;
-                }
-    
-                img {
-                    .food & {
-                        width: 350px;
-                    }
-                }
             }
         }
     }
