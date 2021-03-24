@@ -1,0 +1,84 @@
+/*------------------------------*\
+    Comments
+\*------------------------------*/
+$module: '.comments';
+
+#{$module} {
+    background-color: #F1D1B5;
+    padding: 30px 25px;
+    border-radius: 10px;
+    margin: 20px 32px;
+
+    @include bp(medium) {
+        margin: 30px 120px;
+        padding: 30px 60px;
+    }
+
+    @include bp(large) {
+        margin: 30px 180px;
+    }
+
+    @include bp(xlarge) {
+        margin: 30px 320px;
+        padding: 60px 120px;
+    }
+
+    &__form {
+        &-input {
+            display: block;
+        }
+
+        &-input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: solid 2px #F0B7A4;
+        }
+
+        &-submit {
+            padding: 10px 30px;
+            background-color: #305F72;
+            color: white;
+            border: none;
+            float: right;
+
+            &:hover {
+                zoom: 1.05;
+            }
+        }
+    }
+
+    &__lists {
+        margin-top: 60px;
+        &-item {
+            margin: 10px;
+        }
+
+        &-image {
+            width: 50px;
+            float: left;
+            position: relative;
+            margin: 10px 10px 10px 0;
+            border: solid 2px #305F72;
+        }
+
+        &-title {
+            color: #305F72;
+        }
+
+        &-comment {
+            text-align: justify;
+        }
+
+        &-figcaption {
+            color: #5d5d5d;
+            margin-bottom: 5px;
+            font-size: 9px;
+
+            @include bp(medium) {
+                font-size: 11px;
+            }
+        }
+    }
+}
