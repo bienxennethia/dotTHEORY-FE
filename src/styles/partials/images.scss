@@ -8,15 +8,11 @@ $module: '.images';
         padding: 5px 10px;
 
         &-item {
-            display: inline;
-            min-width: calc(100% - 10px);
+            display: inline-block;
+            width: calc((100% - 10px) / 3);
 
             img {
-                width: 49%;
-
-                @include bp(medium) {
-                    width: 32.9%;
-                }
+                width: 100%;
             }
         }
     }
