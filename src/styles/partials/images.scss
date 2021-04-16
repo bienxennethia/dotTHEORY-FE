@@ -8,8 +8,12 @@ $module: '.images';
         padding: 5px 10px;
 
         &-item {
-            display: inline-block;
-            width: calc((100% - 10px) / 3);
+            display: none;
+            width: calc((100% - 10px) / 2);
+
+            &.active {
+                display: inline-block;
+            }
 
             img {
                 width: 100%;

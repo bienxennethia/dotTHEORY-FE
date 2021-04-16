@@ -4,25 +4,85 @@
 $module: '.header';
 
 #{$module} {
-    text-align: center;
-    background-color: #305F72;
-    padding: 40px 0;
+    background-color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
 
-    &__title {
-        color: #F18C8E;
-    }
+    &__nav {
+        display: none;
 
-    &__nav_li {
-        display: inline;
-        padding: 0 10px;
-        border-right: solid 3px #777;
+        &-open {
+            display: block;
+            background-color: white;
+            padding: 20px 0;
+            width: 100%;
+        }
 
-        &:last-child {
-            border: none;
+        &_li {
+            padding: 20px 10px;
+            border-bottom: solid 2px #777;
+            background-color: transparent;
+            color: #305F72;
+
+            &:hover {
+                background-color: #355C7D;
+                color: #FF7582;
+            }
+        }
+
+        &_icon {
+            z-index: 1000;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: 50px;
+            height: 50px;
+            font-size: 45px;
+            color: #305F72;
+            cursor: pointer;
+    
+            @include bp(large) {
+                display: none;
+            }
         }
     }
 
-    &__nav_item {
-        color: #F1D1B5;
+    &__title {
+        text-align: left;
+        color: #F18C8E;
+        display: inline;
+    }
+
+    @include bp(large) {
+        padding: 40px 20px;
+
+        &__nav {
+            float: right;
+            display: block;
+            margin: 0 120px 0 0;
+
+            &_li {
+                display: inline;
+                padding: 5px 10px;
+                border-right: solid 3px #777;
+                border-bottom: none;
+
+                &:hover {
+                    background-color: transparent;
+                    color: #305F72;
+                }
+            }
+
+            &_item {
+                &:last-child {
+                    .header__nav_li {
+                        border: none;
+                    }
+                }
+            }
+        }
     }
 }

@@ -5,10 +5,35 @@ html, body, h1, h2, h3, p, ol, ul, li, a {
     @include font-title(regular);
 }
 
+@mixin content() {
+    margin: 20px 32px;
+
+    @include bp(medium) {
+        margin: 20px 120px;
+    }
+
+    @include bp(large) {
+        margin: 30px 180px;
+    }
+
+    @include bp(xlarge) {
+        margin: 30px 320px;
+    }
+}
+
+@mixin homeContent() {
+    margin: 20px 32px;
+
+    @include bp(medium) {
+        margin: 20px 100px;
+    }
+}
+
 body {
     background-color: black;
     background-image: url(/src/img/background.webp);
     background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 a {
