@@ -15,9 +15,10 @@
         <a href="../index.php"><h1 class="header__title txt-1">Breeder Rabbits</h1></a>
         <nav class="header__nav">
             <ul class="header__nav_ul">
+                <li class="header__nav_li"><a class="header__nav_item" href="../rabbits.php">Rabbits</a></li>
                 <li class="header__nav_li"><a class="header__nav_item" href="../breeding.php">Breeding</a></li>
-                <li class="header__nav_li"><a class="header__nav_item" href="../food.php">Food</a></li>
-                <li class="header__nav_li"><a class="header__nav_item" href="../about.php">About</a></li>
+                <li class="header__nav_li"><a class="header__nav_item" href="../food.php">Foods & Diet</a></li>
+                <li class="header__nav_li"><a class="header__nav_item" href="../contact-us.php">Contact Us</a></li>
             </ul>
         </nav>
     </header>

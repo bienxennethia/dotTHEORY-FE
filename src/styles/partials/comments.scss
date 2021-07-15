@@ -1,11 +1,11 @@
 /*------------------------------*\
-    Contact Us
+    Comments
 \*------------------------------*/
-$module: '.contact-us';
+$module: '.comments';
 
 #{$module} {
     background-color: #F1D1B5;
-    padding: 30px 20px;
+    padding: 30px 25px;
     border-radius: 10px;
     margin: 20px 32px;
 
@@ -24,21 +24,8 @@ $module: '.contact-us';
     }
 
     &__form {
-        &-label, &-input, &-submit {
+        &-input {
             display: block;
-        }
-
-        &-textarea {
-            width: 100%;
-            border-radius: 5px;
-            border: solid 2px #F0B7A4;
-            margin-bottom: 10px;
-            padding: 10px;
-        }
-
-        &-label {
-            text-align: left;
-            margin-bottom: 10px;
         }
 
         &-input {
@@ -49,26 +36,48 @@ $module: '.contact-us';
             border: solid 2px #F0B7A4;
         }
 
-        &-input, &-textarea {
-            &:active {
-                border: solid 2px #305F72;
-            }
-        }
-
-        &-label[for=newsletter], &-input[type=checkbox] {
-            display: inline;
-        }
-
         &-submit {
-            text-align: center;
-            padding: 10px 50px;
-            margin: 20px auto;
+            padding: 10px 30px;
             background-color: #305F72;
             color: white;
             border: none;
+            float: right;
 
             &:hover {
-                zoom: 1.2;
+                zoom: 1.05;
+            }
+        }
+    }
+
+    &__lists {
+        margin-top: 60px;
+        &-item {
+            margin: 10px;
+        }
+
+        &-image {
+            width: 50px;
+            float: left;
+            position: relative;
+            margin: 10px 10px 10px 0;
+            border: solid 2px #305F72;
+        }
+
+        &-title {
+            color: #305F72;
+        }
+
+        &-comment {
+            text-align: justify;
+        }
+
+        &-figcaption {
+            color: #5d5d5d;
+            margin-bottom: 5px;
+            font-size: 9px;
+
+            @include bp(medium) {
+                font-size: 11px;
             }
         }
     }
