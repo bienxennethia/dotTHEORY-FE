@@ -36,10 +36,9 @@ $prompt-weights: (
 // Style 1 - Titles, Large secction titles
 @mixin text-style-1 {
     @include font-title(bold);
-    font-size: 50px;
+    font-size: 25px;
     letter-spacing: 1.5px;
     line-height: 1.5;
-    margin-bottom: 20px;
 }
 
 .txt-1 { @include text-style-1; }
@@ -56,7 +55,7 @@ $prompt-weights: (
 // Style 3 - list-title
 @mixin text-style-3 {
     @include font-title(semibold);
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 1.5px;
     line-height: 1.2;
     color: #568EA6;

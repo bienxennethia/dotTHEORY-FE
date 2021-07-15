@@ -4,22 +4,17 @@
 $module: '.contact-us';
 
 #{$module} {
+    @include content();
+
     background-color: #F1D1B5;
     padding: 30px 20px;
     border-radius: 10px;
-    margin: 20px 32px;
 
     @include bp(medium) {
-        margin: 30px 120px;
         padding: 30px 60px;
     }
 
-    @include bp(large) {
-        margin: 30px 180px;
-    }
-
     @include bp(xlarge) {
-        margin: 30px 320px;
         padding: 60px 120px;
     }
 
@@ -29,7 +24,7 @@ $module: '.contact-us';
         }
 
         &-textarea {
-            width: 100%;
+            width: calc(100% - 20px);
             border-radius: 5px;
             border: solid 2px #F0B7A4;
             margin-bottom: 10px;

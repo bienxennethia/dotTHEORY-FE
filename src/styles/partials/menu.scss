@@ -1,0 +1,65 @@
+/*------------------------------*\
+    Menu Section
+\*------------------------------*/
+$module: '.menu';
+
+#{$module} {
+    @include homeContent();
+
+    position: relative;
+    background-color: white;
+
+    @include bp(medium) {
+        margin: 20px 40px;
+    }
+
+    @include bp(xlarge) {
+        margin: 20px 180px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        color: #FF7582;
+    }
+
+    &__content {
+        width: calc(100% - 50px);
+        background-color: whitesmoke;
+        display: inline-block;
+        padding: 10px;
+        margin: 5px;
+        vertical-align: top;
+        border-radius: 5px;
+
+        h1 {
+            text-align: center;
+            color: #568EA6;
+        }
+
+        @include bp(medium) {
+            width: calc((100% - 100px) / 3);
+        }
+    }
+
+    &__lists {
+        list-style-type: circle;
+        list-style-position: inside;
+
+        p {
+            display: inline;
+        }
+
+        a {
+            color: black;
+
+            &:hover {
+                color: #FF7582;
+            }
+        }
+    }
+
+    &__list-item {
+        margin: 10px 5px;
+    }
+}

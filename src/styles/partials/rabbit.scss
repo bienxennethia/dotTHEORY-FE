@@ -4,19 +4,7 @@
 $module: '.rabbit';
 
 #{$module} {
-    margin: 20px 32px;
-
-    @include bp(medium) {
-        margin: 30px 120px;
-    }
-
-    @include bp(large) {
-        margin: 30px 180px;
-    }
-
-    @include bp(xlarge) {
-        margin: 30px 320px;
-    }
+    @include content();
 
     &__image {
         text-align: center;

@@ -1,0 +1,81 @@
+/*------------------------------*\
+    News Section
+\*------------------------------*/
+$module: '.news';
+
+#{$module} {
+    @include homeContent();
+
+    &__lists {
+
+        &-item {
+            padding: 10px;
+            margin: 10px 40px;
+            background-color: whitesmoke;
+            display: inline-block;
+
+            @include bp(medium) {
+                margin: 10px 10px;
+                width: calc((100% - 100px) / 2);
+            }
+
+            @include bp(large) {
+                margin: 10px 10px;
+                width: calc((100% - 150px) / 3);
+                height: 100%;
+            }
+
+            &:hover {
+                .news__content {
+                    &-description {
+                        opacity: 1;
+                        color: white;
+                        bottom: 5px;
+                        left: 0;
+                        padding: 10px;
+                        background-color: rgba($color: #000000, $alpha: 0.7);
+            
+                    }
+                }
+            }
+        }
+
+        &-img {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        display: inline-block;
+        position: relative;
+
+        &-title {
+            margin: 10px;
+        }
+
+        &-description {
+            display: block;
+            position: absolute;
+            opacity: 0;
+            transition: background-color 0.5s ease;
+
+        }
+
+        &-link {
+            color: tomato;
+
+            &:hover {
+                .news__content {
+                    &-icon {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        &-icon {
+            margin: 5px;
+            transition: all 0.5s ease;
+        }
+    }
+}
