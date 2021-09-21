@@ -7,7 +7,7 @@ $module: '.menu';
     @include homeContent();
 
     position: relative;
-    background-color: white;
+    background-color: $white;
 
     @include bp(medium) {
         margin: 20px 40px;
@@ -20,12 +20,12 @@ $module: '.menu';
     &__title {
         text-align: center;
         font-size: 40px;
-        color: #FF7582;
+        color: $color-7;
     }
 
     &__content {
         width: calc(100% - 50px);
-        background-color: whitesmoke;
+        background-color: $color-9;
         display: inline-block;
         padding: 10px;
         margin: 5px;
@@ -34,7 +34,7 @@ $module: '.menu';
 
         h1 {
             text-align: center;
-            color: #568EA6;
+            color: $color-10;
         }
 
         @include bp(medium) {
@@ -51,10 +51,10 @@ $module: '.menu';
         }
 
         a {
-            color: black;
+            color: $black;
 
             &:hover {
-                color: #FF7582;
+                color: $color-7;
             }
         }
     }

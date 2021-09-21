@@ -4,7 +4,7 @@
 $module: '.comments';
 
 #{$module} {
-    background-color: #F1D1B5;
+    background-color: $color-1;
     padding: 30px 25px;
     border-radius: 10px;
     margin: 20px 32px;
@@ -33,13 +33,13 @@ $module: '.comments';
             padding: 10px;
             margin: 10px 0;
             border-radius: 5px;
-            border: solid 2px #F0B7A4;
+            border: solid 2px $color-2;
         }
 
         &-submit {
             padding: 10px 30px;
-            background-color: #305F72;
-            color: white;
+            background-color: $color-3;
+            color: $white;
             border: none;
             float: right;
 
@@ -60,11 +60,11 @@ $module: '.comments';
             float: left;
             position: relative;
             margin: 10px 10px 10px 0;
-            border: solid 2px #305F72;
+            border: solid 2px $color-3;
         }
 
         &-title {
-            color: #305F72;
+            color: $color-3;
         }
 
         &-comment {
@@ -72,7 +72,7 @@ $module: '.comments';
         }
 
         &-figcaption {
-            color: #5d5d5d;
+            color: $color-4;
             margin-bottom: 5px;
             font-size: 9px;
 

@@ -12,7 +12,7 @@ $module: '.rabbit';
         img {
             padding: 20px;
             border-radius: 15px;
-            border: solid 5px #F0B7A4;
+            border: solid 5px $color-2;
             width: calc(100% - 45px);
 
             @include bp(medium) {
@@ -24,7 +24,7 @@ $module: '.rabbit';
     &__content {
         margin: 20px 0;
         padding: 0 20px 20px;
-        background-color: white;
+        background-color: $white;
         text-align: center;
 
         p {

@@ -58,7 +58,7 @@ $prompt-weights: (
     font-size: 25px;
     letter-spacing: 1.5px;
     line-height: 1.2;
-    color: #568EA6;
+    color: $color-10;
 }
 
 .list-title { @include text-style-3; }

@@ -8,7 +8,7 @@ $module: '.table';
 
     &__content {
         text-align: center;
-        background-color: white;
+        background-color: $white;
         padding: 10px;
         font-size: 25px;
 
@@ -38,9 +38,9 @@ $module: '.table';
         &-item {
             margin: 0 10px 20px;
             text-align: center;
-            background-color: white;
+            background-color: $white;
             border-radius: 20px;
-            border: solid 2px #F18C8E;
+            border: solid 2px $color-8;
             display: inline-block;
             position: relative;
             vertical-align: top;
@@ -65,12 +65,12 @@ $module: '.table';
             &:hover {
                 .table__list-item-title {
                     opacity: 1;
-                    color: white;
+                    color: $white;
                     top: 50%;
                     transform: translate(-50%, -50%);
                     left: 50%;
                     padding: 10px;
-                    background-color: rgba($color: #000000, $alpha: 0.7);
+                    background-color: rgba($color: $black, $alpha: 0.7);
                 }
             }
 
@@ -97,7 +97,7 @@ $module: '.table';
             img {
                 width: calc(100% - 40px);
                 margin: 20px 20px 10px;
-                border: solid 2px #305F72;
+                border: solid 2px $color-3;
             }
 
             &-description {
@@ -106,16 +106,16 @@ $module: '.table';
                 text-align: justify;
 
                 a {
-                    color: #6B3074;
+                    color: $color-12;
                     font-weight: 800;
-                    border-bottom: solid 1px #6B3074;
+                    border-bottom: solid 1px $color-12;
                 }
             }
         }
     }
 
     &__container {
-        background-color: white;
+        background-color: $white;
         padding: 20px;
         margin-top: 20px;
 
@@ -133,7 +133,7 @@ $module: '.table';
             margin: 10px 0;
 
             strong {
-                color:  #F18C8E;
+                color:  $color-8;
             }
         }
     }

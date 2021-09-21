@@ -11,7 +11,7 @@ $module: '.news';
         &-item {
             padding: 10px;
             margin: 10px 40px;
-            background-color: whitesmoke;
+            background-color: $color-9;
             display: inline-block;
 
             @include bp(medium) {
@@ -29,11 +29,11 @@ $module: '.news';
                 .news__content {
                     &-description {
                         opacity: 1;
-                        color: white;
+                        color: $white;
                         bottom: 5px;
                         left: 0;
                         padding: 10px;
-                        background-color: rgba($color: #000000, $alpha: 0.7);
+                        background-color: rgba($color: $black, $alpha: 0.7);
             
                     }
                 }
@@ -62,7 +62,7 @@ $module: '.news';
         }
 
         &-link {
-            color: tomato;
+            color: $color-11;
 
             &:hover {
                 .news__content {

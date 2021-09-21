@@ -30,8 +30,8 @@ html, body, h1, h2, h3, p, ol, ul, li, a {
 }
 
 body {
-    background-color: black;
-    background-image: url(/src/img/background.webp);
+    background-color: $black; 
+    background-image: url("/src/img/background.webp");
     background-repeat: repeat;
     background-attachment: fixed;
 }
