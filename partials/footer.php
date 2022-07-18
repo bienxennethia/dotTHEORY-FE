@@ -1,5 +1,5 @@
     <footer class="footer">
-        <p>Copyright &copy; 2021 Code and Theory Manila</p>
+        <p>Copyright &copy; 2022 Code and Theory Manila</p>
     </footer>
 </body>
 </html>
